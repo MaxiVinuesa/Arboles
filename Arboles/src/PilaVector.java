@@ -16,19 +16,34 @@ public class PilaVector {
         return cima == -1;
     }
 
-    public void insertar(Object elemento) throws Exception{
+    public void insertar(Object elemento){
         cima++;
         listaPila.addElement(elemento);
     }
 
-    public Object quitar() throws Exception{
+    public Object quitar(){
         Object aux;
         if (isPVacia()){
-            throw new Exception("Pila vacía, no se puede extraer.");
+            System.out.println("Pila vacía, no se puede extraer.");
         }
         aux = listaPila.elementAt(cima);
         listaPila.removeElementAt(cima);
         cima--;
         return aux;
     }
+
+    public Object cimaPila(){
+        if (isPVacia()){
+            System.out.println("Pila vacía, no se puede extraer.");
+        }
+        return listaPila.elementAt(cima);
+    }
+
+    public void limpiarPila(){
+        while (!isPVacia()){
+            quitar();
+        }
+    }
+
+
 }
