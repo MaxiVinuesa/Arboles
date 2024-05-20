@@ -43,17 +43,17 @@ public class App {
             System.out.println("Ingrese el nombre del SubArbol Raiz:  \n");
                 name3 = scc.nextLine();
 
-                a1 = ArbolBinario.nuevoArbol(null, name1, null);
-                a2 = ArbolBinario.nuevoArbol(null, name2, null);
-                a = ArbolBinario.nuevoArbol(a1, name3, a2);
-                pila.insertar(a);
+                //a1 = ArbolBinario.nuevoArbol(null, name1, null);
+                //a2 = ArbolBinario.nuevoArbol(null, name2, null);
+                //a = ArbolBinario.nuevoArbol(a1, name3, a2);
+                //pila.insertar(a);
 
                 //3er ciclo...
 
-                a2 = (Nodo) pila.quitar();
-                a1 = (Nodo) pila.quitar();
+               //a2 = (Nodo) pila.quitar();
+                //a1 = (Nodo) pila.quitar();
                 a = ArbolBinario.nuevoArbol(a1, name3, a2);
-                arbol = new ArbolBinario();
+                arbol = new ArbolBinario(a);
 
                 ArbolBinario.preOrden(arbol.getRaiz());
                 System.out.println("------");
