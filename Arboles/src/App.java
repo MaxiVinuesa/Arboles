@@ -35,23 +35,23 @@ public class App {
                 //2do ciclo...
 
             System.out.println("Ingrese el nombre del SubArbol Izquierdo: \n");
-                name1 = scc.nextLine();
-
-            System.out.println("Ingrese el nombre del SubArbol Derecho \n");
-                name2 = scc.nextLine();
-
-            System.out.println("Ingrese el nombre del SubArbol Raiz:  \n");
+               name1 = scc.nextLine();
+//
+           System.out.println("Ingrese el nombre del SubArbol Derecho \n");
+              name2 = scc.nextLine();
+//
+           System.out.println("Ingrese el nombre del SubArbol Raiz:  \n");
                 name3 = scc.nextLine();
 
-                //a1 = ArbolBinario.nuevoArbol(null, name1, null);
-                //a2 = ArbolBinario.nuevoArbol(null, name2, null);
-                //a = ArbolBinario.nuevoArbol(a1, name3, a2);
-                //pila.insertar(a);
+                a1 = ArbolBinario.nuevoArbol(null, name1, null);
+                a2 = ArbolBinario.nuevoArbol(null, name2, null);
+                a = ArbolBinario.nuevoArbol(a1, name3, a2);
+                pila.insertar(a);
 
                 //3er ciclo...
 
-               //a2 = (Nodo) pila.quitar();
-                //a1 = (Nodo) pila.quitar();
+               a2 = (Nodo) pila.quitar();
+                a1 = (Nodo) pila.quitar();
                 a = ArbolBinario.nuevoArbol(a1, name3, a2);
                 arbol = new ArbolBinario(a);
 
