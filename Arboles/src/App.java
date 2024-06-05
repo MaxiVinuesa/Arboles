@@ -32,7 +32,7 @@ public class App {
                 a = ArbolBinario.nuevoArbol(a1, name3, a2);
                 pila.insertar(a);
 
-                //2do ciclo...
+                //2do ciclo...1
 
             System.out.println("Ingrese el nombre del SubArbol Izquierdo: \n");
                name1 = scc.nextLine();
@@ -50,7 +50,7 @@ public class App {
 
                 //3er ciclo...
 
-               a2 = (Nodo) pila.quitar();
+                a2 = (Nodo) pila.quitar();
                 a1 = (Nodo) pila.quitar();
                 a = ArbolBinario.nuevoArbol(a1, name3, a2);
                 arbol = new ArbolBinario(a);
